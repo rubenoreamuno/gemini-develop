@@ -5,6 +5,9 @@ WORKDIR /app/frontend
 COPY frontend/package*.json ./
 RUN npm install
 COPY frontend/ .
+RUN npm install postcss-cli
+ENV SKIP_PREFLIGHT_CHECK=true
+RUN npx postcss ./src/index.css -o ./src/tailwind.css
 RUN npm run build
 
 # Build backend
