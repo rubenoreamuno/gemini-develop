@@ -19,7 +19,7 @@ steps:
       - '--region=us-central1' # Change to your preferred region
       - '--platform=managed'
       - '--allow-unauthenticated'
-      - '--set-env-vars=GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/credentials.json' # Replace with your secret manager setup
+      - '--set-secrets=FIREBASE_CONFIG=projects/975674340567/secrets/firebase-admin-sa1'
 
 images:
   - 'gcr.io/focal-elf-464303-h6/gemini-develop'

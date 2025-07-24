@@ -13,7 +13,7 @@ load_dotenv()
 # Initialize Firebase Admin SDK
 # In a production environment, use Secret Manager to handle the service account key
 # For local development, you can use a serviceAccountKey.json file
-if os.getenv("GOOGLE_APPLICATION_CREDENTIALS"):
+if os.getenv("FIREBASE_CONFIG"):
     cred = credentials.ApplicationDefault()
 else:
     cred = credentials.Certificate("serviceAccountKey.json")
